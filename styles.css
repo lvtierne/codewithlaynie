@@ -47,6 +47,20 @@ p {
 }
 
 /* Reset default button styles */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%; /* Adjust max-width for responsiveness */
+    margin: 0 auto; /* Center align the container */
+    padding: 20px;
+    background-color: #f1f2f6; /* Light gray background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Individual button styles */
 .links a {
     display: inline-block;
     margin: 10px 0;
@@ -79,15 +93,12 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Stronger shadow */
 }
 
-/* Specific button colors */
-.links a.youtube {
-    background-color: #e74c3c; /* Reddish shade for YouTube */
-    border-color: #e74c3c; /* Matching border color */
-}
-
-.links a.linkedin {
-    background-color: #154360; /* Darker blue for LinkedIn */
-    border-color: #154360; /* Matching border color */
+/* Adjust profile picture */
+.profile-pic {
+    width: 120px; /* Adjust according to your design */
+    height: 120px; /* Adjust according to your design */
+    border-radius: 50%; /* Circular shape */
+    margin-bottom: 20px;
 }
 
 
