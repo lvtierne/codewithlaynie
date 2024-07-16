@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Adjust branch name if necessary
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build and Deploy
+        run: |
+          # Replace these lines with your build and deploy commands
+          npm install  # Example: If you use npm
+          npm run build  # Example: Build command
+
+          # Deploy to GitHub Pages
+          mkdir deploy
+          cp -r * deploy/
+          cd deploy
+          git init
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push -f https://github.com/yourusername/repositoryname.git master:gh-pages
