@@ -30,9 +30,10 @@ jobs:
           git config --global user.name "GitHub Actions"
           git checkout --orphan gh-pages
           git rm -rf .
-          cp -r ./* .  # Copy all files from root directory
+          cp -r build/* .
           touch .nojekyll  # Create .nojekyll file if your site uses JavaScript
           git add .
           git commit -m "Deploy to GitHub Pages"
           git branch -M gh-pages
           git push -f origin gh-pages
+
