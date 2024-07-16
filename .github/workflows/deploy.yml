@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Adjust branch name if necessary
+      - main  # Trigger on push to main branch, adjust as needed
 
 jobs:
   deploy:
@@ -13,13 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Build and Deploy
+      - name: Deploy to GitHub Pages
         run: |
-          # Replace these lines with your build and deploy commands
-          npm install  # Example: If you use npm
-          npm run build  # Example: Build command
-
-          # Deploy to GitHub Pages
           mkdir deploy
           cp -r * deploy/
           cd deploy
